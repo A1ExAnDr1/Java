@@ -1,0 +1,13 @@
+пакет  ru.mirea.pr2 ;
+import  java.lang. * ;
+public  class  TestAuthor {
+
+    public  static  void  main ( String [] args ) {
+
+        Автор a =  новый  Автор ( " Стив Петерсон " , " example@mail.com " , ' M ' );
+
+        Система . из . println (а);
+        а . setEmail ( " steve@mail.com " );
+        Система . из . println (а);
+    }
+}
