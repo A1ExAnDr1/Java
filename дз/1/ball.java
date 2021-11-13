@@ -2,7 +2,7 @@
 
 public  class  Ball {
     частный  цвет строки ;
-    частный  размер строки ;
+     размер частной строки ;
 
     public  Ball ( String  n , String  a ) {
         цвет = n;
