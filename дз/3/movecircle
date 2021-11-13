@@ -1,0 +1,35 @@
+пакет  ru.mirea.pr3 ;
+
+открытый  класс  MovableCircle  реализует  Movable {
+    частный  int радиус;
+    частный  финальный  центр MovablePoint ;
+
+    public  MovableCircle ( int  x , int  y , int  xSpeed , int  ySpeed , int  radius ) {
+        center =  new  MovablePoint (x, y, xSpeed, ySpeed);
+        это . радиус = радиус;
+    }
+
+    @Override
+    public  String  toString () {
+        return  " MovableCircle { "  +
+                " radius = "  + radius +
+                " , center = "  + center +
+                ' } ' ;
+    }
+
+    public  void  moveUp () {
+        центр . moveUp ();
+    }
+
+    public  void  moveDown () {
+        центр . moveDown ();
+    }
+
+    public  void  moveLeft () {
+        центр . двигай влево();
+    }
+
+    public  void  moveRight () {
+        центр . переместить вправо();
+    }
+}
