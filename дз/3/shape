@@ -1,0 +1,38 @@
+пакет  ru.mirea.pr3 ;
+
+public  abstract  class  Shape {
+    защищенный  цвет строки ;
+    защищенное  логическое значение заполнено;
+
+    общедоступная  форма ( цвет строки  , логическое заполнение ) { 
+        это . color = цвет;
+        это . заполнено = заполнено;
+    }
+    public  Shape () {
+    }
+
+    public  String  getColor () {
+        вернуть цвет;
+    }
+    public  void  setColor ( Цвет строки  ) {
+        это . color = цвет;
+    }
+
+    public  void  setFilled ( логическое  заполнение ) {
+        это . заполнено = заполнено;
+    }
+    public  boolean  isFilled () {
+        возврат заполнен;
+    }
+
+    абстрактный  двойной  getArea ();
+    абстрактный  двойной  getPerimeter ();
+
+    @Override
+    public  String  toString () {
+        вернуть  " Shape { "  +
+                " цвет = ' "  + цвет +  ' \ ' '  +
+                " , заполнено = "  + заполнено +
+                ' } ' ;
+    }
+}
