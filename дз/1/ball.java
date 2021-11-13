@@ -1,3 +1,4 @@
+пакет  ru.mirea.pr1 ;
 
 public  class  Ball {
     частный  цвет строки ;
