@@ -1,0 +1,10 @@
+пакет  ru.mirea.pr2 ;
+import  java.lang. * ;
+public  class  TestBall {
+    public  static  void  main ( String [] args ) {
+        Шар b1 =  новый  Шар ( 100 , 100 );
+        Система . из . println (b1);
+        b1 . переместить ( 30 , 15 );
+        Система . из . println (b1);
+    }
+}
