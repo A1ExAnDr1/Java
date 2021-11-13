@@ -1,0 +1,40 @@
+пакет  ru.mirea.pr3 ;
+import  java.math. * ;
+открытый  класс  Circle  расширяет  форму {
+    защищенный  двойной радиус;
+
+    public  Circle () {
+    }
+    public  Circle ( двойной  радиус ) {
+        это . радиус = радиус;
+    }
+    общедоступный  круг ( двойной  радиус , цвет строки  , логическое заполнение ) { 
+        супер (цвет, заливка);
+        это . радиус = радиус;
+    }
+
+    public  double  getRadius () {
+        радиус возврата ;
+    }
+    public  void  setRadius ( двойной  радиус ) {
+        это . радиус = радиус;
+    }
+
+    @Override
+    double  getArea () {
+        вернуть  Math . ПИ * радиус * радиус;
+    }
+
+    @Override
+    double  getPerimeter () {
+        return  2 * Math . PI * радиус;
+    }
+
+    @Override
+    public  String  toString () {
+        return  " Circle { "  +
+                " radius = "  + radius +
+                " , color = ' "  + color +  ' \ ' '  +
+                ' } ' ;
+    }
+}
