@@ -1,0 +1,53 @@
+пакет  ru.mirea.pr3 ;
+
+открытый  класс  Rectangle  расширяет  Shape {
+    защищенная  двойная ширина, длина;
+
+    public  Rectangle ( цвет строки  , логическое заполнение ) { 
+    }
+    public  Rectangle ( двойная  ширина , двойная  длина ) {
+        это . ширина = ширина;
+        это . длина = длина;
+    }
+    public  Rectangle ( двойная  ширина , двойная  длина , цвет строки  , логическое заполнение ) { 
+        супер (цвет, заливка);
+        это . ширина = ширина;
+        это . длина = длина;
+    }
+
+    public  Rectangle () {
+    }
+
+    public  double  getWidth () {
+        ширина возврата ;
+    }
+    public  void  setWidth ( двойная  ширина ) {
+        это . ширина = ширина;
+    }
+
+    public  double  getLength () {
+        длина возврата ;
+    }
+    public  void  setLength ( двойная  длина ) {
+        это . длина = длина;
+    }
+
+    @Override
+    double  getArea () {
+        ширина возврата * длина;
+    }
+
+    @Override
+    double  getPerimeter () {
+        возврат  2 * (ширина + длина);
+    }
+
+    @Override
+    public  String  toString () {
+        return  " Прямоугольник { "  +
+                " ширина = "  + ширина +
+                " , length = "  + length +
+                " , color = ' "  + color +  ' \ ' '  +
+                ' } ' ;
+    }
+}
