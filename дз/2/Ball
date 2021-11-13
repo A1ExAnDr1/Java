@@ -1,0 +1,35 @@
+пакет  ru.mirea.pr2 ;
+import  java.lang. * ;
+public  class  Ball {
+    частный  двойной x =  0 , y =  0 ;
+
+    public  Ball ( double  x , double  y ) {
+        это . х = х;
+        это . у = у;
+    }
+    public  Ball () {
+    }
+    public  double  getX () {
+        вернуть x;
+    }
+    public  void  setX ( double  x ) {
+        это . х = х;
+    }
+    public  double  getY () {
+        вернуть y;
+    }
+    public  void  setY ( double  y ) {
+        это . у = у;
+    }
+    public  void  setXY ( двойной  x , двойной  y ) {
+        это . х = х;
+        это . у = у;
+    }
+    public  void  move ( двойной  xDisp , двойной  yDisp ) {
+        х + = xDisp;
+        y + = yDisp;
+    }
+    public  String  toString () {
+        return  " Ball @ ( " + this . x + " , " + this . y + " ). " ;
+    }
+}
