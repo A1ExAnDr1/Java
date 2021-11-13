@@ -1,0 +1,26 @@
+пакет  ru.mirea.pr2 ;
+import  java.lang. * ;
+public  class  Author {
+    личное  имя строки , адрес электронной почты;
+    частный  голец пол;
+
+    public  Author ( String  name , String  email , char  пол ) {
+        это . name = name;
+        это . электронная почта = электронная почта;
+        это . пол = пол;
+    }
+    public  void  setEmail ( String  email ) {
+        это . электронная почта = электронная почта;
+    }
+    public  String  getName () {
+        возвращаемое имя;
+    }
+    public  String  getEmail () {
+        ответное письмо;
+    }
+    public  char  getGender () {
+        вернуть пол;
+    }
+    public  String  toString () {
+        верни  это . name + " ( " + this . пол + " ) at " + this . Эл. адрес; }
+}
