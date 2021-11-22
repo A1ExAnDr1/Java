@@ -1,0 +1,44 @@
+пакет  ru.mirea.pr7 ;
+
+import  java.util.ArrayDeque ;
+import  java.util.Deque ;
+import  java.util.LinkedList ;
+
+public  class  myDoubleList {
+    частный  статический  LinkedList < Integer > firstDeck =  new  LinkedList <> (),
+            secondDeck =  новый  LinkedList <> ();
+
+    myDoubleList ( Строка [] первый , строка [] второй ) {
+        for ( int i =  0 ; i <  5 ; i ++ ) {
+            firstDeck . добавить ( Целое число . parseInt (первый [я]));
+            secondDeck . добавить ( Целое число . parseInt (второй [я]));
+        }
+    }
+    публичный  статический  Строка  воспроизведения ( строка [] первая , строка [] второй ) {
+        новый myDoubleList (первый, второй);
+        for ( int i =  0 ; i <  106 ; i ++ ) {
+            если (firstDeck . size () ==  0 )
+                вернуть  « второй » + i;
+            иначе,  если (secondDeck . size () ==  0 )
+                вернуть  « первый » + i;
+            else {
+                Целое число a = firstDeck . Удалить();
+                Целое число b = secondDeck . Удалить();
+                if (a ==  0  && b ==  9 ) {
+                    firstDeck . добавить);
+                    firstDeck . добавить (б);
+                } else  if (b ==  0  && a ==  9 ) {
+                    secondDeck . добавить);
+                    secondDeck . добавить (б);
+                } else  if (a > b) {
+                    firstDeck . добавить);
+                    firstDeck . добавить (б);
+                } else {
+                    secondDeck . добавить);
+                    secondDeck . добавить (б);
+                }
+            }
+        }
+        вернуть  « болда » ;
+    }
+}
