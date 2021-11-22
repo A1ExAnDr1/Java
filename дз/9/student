@@ -1,0 +1,98 @@
+пакет  ru.mirea.pr9.task2 ;
+
+import  java.util.Random ;
+
+class  Student  реализует  Comparable < Student >, LabClassUI {
+
+    частный  целочисленный идентификатор;
+    частное  целое число  GPA ;
+    частное  строковое имя;
+
+    public  Student ( String  name , Integer  GPA ) {
+        это . GPA  =  GPA ;
+        это . name = name;
+        Случайный случайный =  новый  Случайный ();
+        это . id = случайный . nextInt ( 10 );
+    }
+
+    public  Student ( Integer  id , Integer  GPA , String  name ) {
+        это . id = id;
+        это . GPA  =  GPA ;
+        это . name = name;
+    }
+    public  Student () {
+    }
+
+    public  Integer  getId () {
+        вернуть идентификатор;
+    }
+    public  void  setId ( Целочисленный  идентификатор ) {
+        это . id = id;
+    }
+    public  Integer  getGPA () {
+        вернуть  средний балл ;
+    }
+    public  void  setGPA ( Целочисленный  GPA ) {
+        это . GPA  =  GPA ;
+    }
+    public  String  getName () {
+        возвращаемое имя;
+    }
+    public  void  setName ( String  name ) {
+        это . name = name;
+    }
+
+/ *
+    public static Student [] getSamples (логический флаг)
+    {
+        Случайный случайный = новый Случайный ();
+        var student = новый ученик [10];
+        if (flag == true) {
+            for (int i = 0; i <10; i ++) {
+                Студент студент = новый студент ();
+                student.setId (random.nextInt (10) + i);
+                студенты [i] = студент;
+            }
+        } еще {
+            for (int i = 0; i <10; i ++) {
+                Студент студент = новый студент ();
+                student.setGPA (random.nextInt (5) + 1);
+                студенты [i] = студент;
+            }
+        }
+        возвращение студентов;
+    }
+* /
+
+    public  static  void  findName ( массив Student [] , имя строки ) { 
+        Логический флаг =  ложь ;
+        for ( Студент, студент : массив) {
+            if (student . getName () . equals (name)) {
+                Система . из . println ( " Студент "  + name +  " найден. \ n ID: "  + student . id +  " \ n Ср. балл = "  + student . name + " \ n " );
+                flag =  true ;
+            }
+        }
+        попробуйте {
+            if ( ! flag) {
+                выбросить  новое  исключение StudentNotFoundException (name +  " не найден (а) " );
+            }
+        } catch ( StudentNotFoundException e) {
+            Система . из . println (e);
+        }
+    }
+
+    @Override
+    public  String  toString () {
+        вернуть  " Студент { "  +
+                " id = "  + id +
+                " , GPA = "  +  GPA  +
+                " , name = ' "  + name +  ' \ ' '  +
+                ' } ' ;
+    }
+
+    @Override
+    public  int  compareTo ( Студент  o ) {
+        вернуться  о . GPA  -  это . GPA ;
+    }
+
+}
