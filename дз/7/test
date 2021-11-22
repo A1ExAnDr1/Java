@@ -1,0 +1,20 @@
+пакет  ru.mirea.pr7 ;
+
+import  java.util.Scanner ;
+
+public  class  Test {
+    public  static  void  main ( String [] args ) {
+        Сканер Сканер =  новый  Сканер ( System . In);
+        Система . из . println ( " Введите колоды игроков: " );
+        Строка [] first = сканер . nextLine () . сплит ( "  " );
+        Строка [] second = сканер . nextLine () . сплит ( "  " );
+        Система . из . println ( " \ n Тестирование через Stack: " );
+        Система . из . println (myStack . play (первый, второй));
+        Система . из . println ( " \ n Тестирование через очередь: " );
+        Система . из . println (myQueue . play (первый, второй));
+        Система . из . println ( " \ n Тестирование через Deque: " );
+        Система . из . println (myDeque . play (первый, второй));
+        Система . из . println ( " \ n Тестирование через DoubleList: " );
+        Система . из . println (myDoubleList . play (первый, второй));
+        }
+}
