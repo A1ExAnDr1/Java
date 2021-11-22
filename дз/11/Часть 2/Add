@@ -1,0 +1,60 @@
+пакет  ru.mirea.pr12.task2 ;
+
+import  java.util.StringTokenizer ;
+
+public  class  Address {
+     страна частной строки ;
+    частная  область String ;
+    частный  струнный город;
+    частная  струнная улица;
+    частный  струнный дом;
+    частное  здание String ;
+    частная  струнная квартира;
+
+    public  void  setAddress ( String  country , String  region , String  city , String  street , String  house , String  building , String  flat ) {
+        это . country = страна;
+        это . region = регион;
+        это . city = город;
+        это . street = улица;
+        это . дом = дом;
+        это . здание = здание;
+        это . квартира = квартира;
+    }
+
+    public  Address () {
+        это . страна =  ноль ;
+        это . регион =  ноль ;
+        это . city =  null ;
+        это . улица =  ноль ;
+        это . дом =  ноль ;
+        это . building =  null ;
+        это . квартира =  ноль ;
+    }
+
+    public  void  splitAddress ( строковый  адрес ) {
+        Строка [] parts = адрес . split ( " , " );
+        setAddress (parts [ 0 ], parts [ 1 ], parts [ 2 ], parts [ 3 ], parts [ 4 ], parts [ 5 ], parts [ 6 ]));
+    }
+
+    public  void  tokenizeAddress ( строковый  адрес ) {
+        StringTokenizer токенизатор =  новый  StringTokenizer (адрес, ";. " );
+        Строка [] частей =  новая  Строка [ 7 ];
+        for ( int i =  0 ; i <  7 ; i ++ ) {
+            Строковый токен = токенизатор . nextToken ();
+            части [i] = токен;
+        }
+        setAddress (parts [ 0 ], parts [ 1 ], parts [ 2 ], parts [ 3 ], parts [ 4 ], parts [ 5 ], parts [ 6 ]));
+    }
+
+    @Override
+    public  String  toString () {
+        вернуть  " Адрес: "  +
+                « страна - »  + страна +
+                " , регион - "  + регион +
+                " , город - "  + город +
+                " , улица - "  + улица +
+                " , дом - "  + дом +
+                " , здание - "  + здание +
+                " , квартира - "  + квартира;
+    }
+}
