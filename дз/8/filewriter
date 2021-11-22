@@ -1,0 +1,43 @@
+пакет  ru.mirea.pr8 ;
+
+import  java.io. * ;
+
+публичный  класс  Main
+{
+    
+  static  void  First ( String  str ) выдает  исключение IOException
+  {
+    FileWriter  FilW  =  новый  FileWriter ( " Texqqqq.txt " , ложь );
+      FilW . написать (str);
+      FilW . промывать ();
+  }
+  
+  static  void  Second () выдает  исключение IOException
+  {
+    FileReader  FilR  =  новый  FileReader ( " Texqqqq.txt " );
+    int  R ;
+    в то время как (( R  =  FilR . read ()) ! =  - 1 )
+      {
+	Система . из . печать (( символ ) R );
+      }
+  }
+  
+  static  void  Четвертый ( String  str ) выдает  исключение IOException
+  {
+    FileWriter  FilW  =  новый  FileWriter ( " Texqqqq.txt " , истина );
+      FilW . написать (str);
+      FilW . близко ();
+  }
+  
+  public  static  void  main ( String [] args ) выбрасывает  IOException
+  {
+    InputStreamReader isr =  новый  InputStreamReader ( System . In );
+    BufferedReader br =  новый  BufferedReader (isr);
+    Строка str = br . readLine ();
+      Первый (ул.);
+      Второй ();
+      str = br . readLine ();
+      Четвертая (ул);
+      Второй ();
+  }
+}
