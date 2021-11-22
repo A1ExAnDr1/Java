@@ -1,0 +1,42 @@
+пакет  ru.mirea.pr7 ;
+
+import  java.util.Stack ;
+
+public  class  myStack {
+    частный  статический  стек < Integer > firstDeck =  новый  стек <> (),
+                                 secondDeck =  новый  стек <> ();
+
+    myStack ( Строка [] первый , строка [] второй ) {
+        for ( int i =  4 ; i > =  0 ; i - ) {
+            firstDeck . добавить ( Целое число . parseInt (первый [я]));
+            secondDeck . добавить ( Целое число . parseInt (второй [я]));
+        }
+    }
+    публичный  статический  Строка  воспроизведения ( строка [] первая , строка [] второй ) {
+        новый myStack (первый, второй);
+        for ( int i =  0 ; i <  106 ; i ++ ) {
+            если (firstDeck . size () ==  0 )
+                вернуть  « второй » + i;
+            иначе,  если (secondDeck . size () ==  0 )
+                вернуть  « первый » + i;
+            else {
+                Целое число a = firstDeck . pop ();
+                Целое число b = secondDeck . pop ();
+                if (a ==  0  && b ==  9 ) {
+                    firstDeck . добавить ( 0 , а);
+                    firstDeck . добавить ( 0 , б);
+                } else  if (b ==  0  && a ==  9 ) {
+                    secondDeck . добавить ( 0 , а);
+                    secondDeck . добавить ( 0 , б);
+                } else  if (a > b) {
+                    firstDeck . добавить ( 0 , а);
+                    firstDeck . добавить ( 0 , б);
+                } else {
+                    secondDeck . добавить ( 0 , а);
+                    secondDeck . добавить ( 0 , б);
+                }
+            }
+        }
+        вернуть  « болда » ;
+    }
+}
