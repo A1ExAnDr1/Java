@@ -1,0 +1,35 @@
+пакет  ru.mirea.pr12.task1 ;
+
+public  class  Main {
+    public  static  void  main ( String [] args ) {
+        Человек x =  новый  Человек ( " Иванов " , " Иван " );
+        Система . из . println (x . getName ());
+    }
+}
+class  Person {
+    публичное  статическое  строковое имя;
+    публичная  статическая  строковая фамилия;
+    общедоступная  статическая  строка thirdName;
+
+    public  Person ( String  name , String  surname , String  thirdName ) {
+        Человек . name = name;
+        Человек . surname = фамилия;
+        Человек . третьеНазвание = третьеНазвание;
+    }
+
+    public  Person ( String  name , String  surname ) {
+        Человек . name = name;
+        Человек . surname = фамилия;
+        Человек . thirdName =  " " ;
+    }
+
+    public  Person ( String  name ) {
+        Человек . name = name;
+        Человек . фамилия =  " " ;
+        Человек . thirdName =  " " ;
+    }
+
+    общественности  статической  StringBuilder  GetName () {
+        вернуть  новый  StringBuilder (фамилия + '  ' + имя + '  ' + thirdName);
+    }
+}
