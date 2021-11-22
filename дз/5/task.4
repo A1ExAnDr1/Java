@@ -1,0 +1,53 @@
+пакет  ru.mirea.pr5 ;
+
+import  java.util.Scanner ;
+
+public  class  task_4 {
+/ *
+    4. Заданная сумма цифр
+    Даны натуральные числа k и s. Определите, сколько существует k-значных
+    натуральных чисел, сумма цифр которых равна d. Запись натурального числа не
+    может начинаться с цифрами 0.
+* /
+    private  static  int  chekSum ( int  digit ) {
+        int sum =  0 ;
+        while (цифра ! = 0 ) {
+            сумма + = цифра % 10 ;
+            цифра / =  10 ;
+        }
+        сумма возврата ;
+    }
+
+    public  static  void  find ( int  digit , int  k , int  s ) {
+        найти (цифра, k, s, 0 );
+    }
+
+    public  static  void  find ( int  digit , int  k , int  s , int  count ) {
+        if (digit == ( int ) Math . pow ( 10 , k))
+            Система . из . println (количество);
+        else {
+            do { // перебираю по 10 не в рекурсии для предотвращения переполнения стека
+                if (chekSum (digit) == s) {
+                    count ++ ;
+                }
+                цифра ++ ;
+            } while (цифра %  10  ! =  0 );
+
+            найти (цифра, k, s, счет);
+        }
+    }
+
+    public  static  void  main ( String [] args ) {
+        Scanner scan =  новый  сканер ( System . In);
+        Система . из . println ( « Программа корректно отрабатывает до 5-и значных чисел » );
+        int k = сканирование . nextInt ();
+        while (k >  5 ) {
+            Система . из . println ( " Слишком большое k. Введите число поменьше. " );
+            k = сканирование . nextInt ();
+        }
+        int s = сканирование . nextInt ();
+        Система . из . println ( " Принято: k = " + k + " s = " + s);
+        int digit = ( int ) Математика . pow ( 10 , k - 1 );
+        найти (цифра, k, s);
+    }
+}
