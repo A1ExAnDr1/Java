@@ -1,0 +1,32 @@
+пакет  ru.mirea.pr12.task5 ;
+
+import  java.io.BufferedReader ;
+import  java.io.FileReader ;
+import  java.io.IOException ;
+import  java.util.Scanner ;
+
+public  class  Main {
+    public  static  void  main ( String [] args ) выбрасывает  IOException {
+//         System.out.println ("Введите абсолютный путь к файлу:");
+//         Сканер scanner = новый Сканер (System.in);
+//         Строковый файл = scanner.nextLine ();
+        String file =  " C: \ Users \ palya \ IdeaProjects \ JavaTasks \ src \ ru \ mirea \ pr12 \ task5 \ words.txt " ;
+        Читатель BufferedReader =  новый  BufferedReader ( новый  FileReader (файл));
+        Строка input = reader . readLine ();
+        StringBuilder result = getLine (input . Split ( "  " ));
+        Система . из . println (результат);
+
+    }
+    Статическая  StringBuilder  GetLine ( строка ... вход ) {
+        StringBuilder result =  новый  StringBuilder ();
+        результат . добавить (вход [ 0 ]);
+        for ( int i =  1 ; i < input . length; i ++ ) {
+            int j =  0 ;
+            while ( ! (input [j] . charAt ( 0 ) == (result . charAt (result . length () - 1 ))))
+                j ++ ;
+            результат . append ( "  "  + input [j]);
+            input [j] =  "  " ;
+        }
+        вернуть результат;
+    }
+}
