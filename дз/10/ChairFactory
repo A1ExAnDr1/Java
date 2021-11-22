@@ -1,0 +1,18 @@
+пакет  ru.mirea.pr10.task2 ;
+
+открытый  класс  ChairFactory  реализует  AbstractChairFactory {
+    @Override
+    public  VictorianChair  createVictrorianChair () {
+        вернуть  новый  VictorianChair ();
+    }
+
+    @Override
+    public  MagicChair  createMagicanChair () {
+        вернуть  новый  MagicChair ();
+    }
+
+    @Override
+    public  FunctionalChair  createFunctionalChair () {
+        вернуть  новый  FunctionalChair ();
+    }
+}
