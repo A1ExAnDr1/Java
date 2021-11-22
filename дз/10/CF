@@ -1,0 +1,13 @@
+пакет  ru.mirea.pr10.task1 ;
+
+открытый  класс  ConcreteFactory  реализует  ComplexAbstractFactory {
+    @Override
+    public  Complex  createComplex () {
+        return  new  Complex ();
+    }
+
+    @Override
+    общедоступный  Комплекс  createComplex ( int  real , int  image ) {
+        вернуть  новый  комплекс (реальный, изображение, ' + ' );
+    }
+}
