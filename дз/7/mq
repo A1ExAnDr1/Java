@@ -1,0 +1,44 @@
+пакет  ru.mirea.pr7 ;
+
+import  java.util.LinkedList ;
+import  java.util.PriorityQueue ;
+import  java.util.Queue ;
+
+public  class  myQueue {
+    частная  статическая  очередь < Integer > firstDeck =  new  LinkedList <> (),
+                                 secondDeck =  новый  LinkedList <> ();
+
+    myQueue ( Строка [] первый , строка [] второй ) {
+        for ( int i =  0 ; i <  5 ; i ++ ) {
+            firstDeck . добавить ( Целое число . parseInt (первый [я]));
+            secondDeck . добавить ( Целое число . parseInt (второй [я]));
+        }
+    }
+    публичный  статический  Строка  воспроизведения ( строка [] первая , строка [] второй ) {
+        новый myQueue (первый, второй);
+        for ( int i =  0 ; i <  106 ; i ++ ) {
+            если (firstDeck . size () ==  0 )
+                вернуть  « второй » + i;
+            иначе,  если (secondDeck . size () ==  0 )
+                вернуть  « первый » + i;
+            else {
+                Целое число a = firstDeck . Удалить();
+                Целое число b = secondDeck . Удалить();
+                if (a ==  0  && b ==  9 ) {
+                    firstDeck . добавить);
+                    firstDeck . добавить (б);
+                } else  if (b ==  0  && a ==  9 ) {
+                    secondDeck . добавить);
+                    secondDeck . добавить (б);
+                } else  if (a > b) {
+                    firstDeck . добавить);
+                    firstDeck . добавить (б);
+                } else {
+                    secondDeck . добавить);
+                    secondDeck . добавить (б);
+                    }
+            }
+        }
+        вернуть  « болда » ;
+    }
+}
