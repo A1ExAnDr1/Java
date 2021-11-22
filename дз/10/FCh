@@ -1,0 +1,12 @@
+пакет  ru.mirea.pr10.task2 ;
+
+открытый  класс  FunctionalChair  реализует  Chair {
+    public  int  sum ( int  a , int  b ) {
+        вернуть a + b;
+    }
+
+    @Override
+    public  String  toString () {
+        return  " FunctionalChair " ;
+    }
+}
