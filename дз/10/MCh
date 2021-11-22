@@ -1,0 +1,12 @@
+пакет  ru.mirea.pr10.task2 ;
+
+открытый  класс  MagicChair  реализует  Chair {
+    public  void  doMagic () {
+        Система . из . println ( " Вжух, и стул взлетел ... " );
+    }
+
+    @Override
+    public  String  toString () {
+        return  " MagicChair " ;
+    }
+}
