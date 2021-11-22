@@ -1,0 +1,16 @@
+пакет  ru.mirea.pr10.task1 ;
+
+public  class  Complex {
+    int real;
+    int image;
+    знак char ;
+
+    public  Complex () {
+    }
+
+    public  Complex ( int  real , int  image , char  sign ) {
+        это . реальный = реальный;
+        это . image = изображение;
+        это . знак = знак;
+    }
+}
