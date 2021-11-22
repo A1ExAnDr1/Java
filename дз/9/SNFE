@@ -1,0 +1,7 @@
+пакет  ru.mirea.pr9.task2 ;
+
+class  StudentNotFoundException  расширяет  RuntimeException,  реализует  LabClassUI {
+    public  StudentNotFoundException ( String  errorMessage ) {
+        super (errorMessage);
+    }
+}
