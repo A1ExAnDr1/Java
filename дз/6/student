@@ -1,0 +1,59 @@
+пакет  ru.mirea.pr6 ;
+
+import  java.util.Random ;
+
+class  Student  реализует  Comparable < Student > {
+
+    частный  целочисленный идентификатор;
+    частное  целое число  GPA ;
+
+    public  Integer  getId () {
+        вернуть идентификатор;
+    }
+    public  void  setId ( Целочисленный  идентификатор ) {
+        это . id = id;
+    }
+    public  Integer  getGPA () {
+        вернуть  средний балл ;
+    }
+    public  void  setGPA ( Целочисленный  GPA ) {
+        это . GPA  =  GPA ;
+    }
+
+    public  static  Student [] getSamples ( логический  флаг )
+    {
+        Случайный случайный =  новый  Случайный ();
+        var student =  новый  ученик [ 10 ];
+
+        if (flag ==  true ) {
+
+            for ( int i =  0 ; i <  10 ; i ++ ) {
+                Студент студент =  новый  студент ();
+                студент . setId (случайный . nextInt ( 20 ) + я);
+                студенты [i] = студент;
+            }
+        } else {
+            for ( int i =  0 ; i <  10 ; i ++ ) {
+                Студент студент =  новый  студент ();
+                студент . setGPA (случайный . nextInt ( 5 ) +  1 );
+                студенты [i] = студент;
+            }
+        }
+
+        возвращение студентов;
+    }
+
+    @Override
+    public  String  toString () {
+        вернуть  " Студент { "  +
+                " id = "  + id +
+                " , GPA = "  +  GPA  +
+                " } " ;
+    }
+
+    @Override
+    public  int  compareTo ( Студент  o ) {
+        вернуться  о . GPA  -  это . GPA ;
+    }
+
+}
