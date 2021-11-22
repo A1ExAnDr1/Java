@@ -1,0 +1,31 @@
+пакет  ru.mirea.pr9 ;
+
+import  java.util.Scanner ;
+
+public  class  Task1 {
+    public  static  void  main ( String [] args ) {
+        Сканер Сканер =  новый  Сканер ( System . In);
+        Имя строки ;
+
+        Система . из . println ( " Введите ФИО " );
+        имя = сканер . nextLine (); // фио
+        Система . из . println ( " Введите ИНН " );
+        while ( true ) {
+            попробуйте {
+                Строка  INN  = сканер . nextLine (); // инн
+                если ( ! INN . соответствует ( " \\ d {12} " ))
+                    выкинуть  новый  NumbersOf_INN ( " Должно быть 12 цифр " , сканер . ioException ());
+                еще
+                    Система . из . println ( " хорошо " );
+            } catch ( NumbersOf_INN e) {
+                Система . из . println (e);
+            }
+        }
+    }
+}
+
+class  NumbersOf_INN  расширяет  исключение {
+    public  NumbersOf_INN ( String  errorMessage , Throwable  err ) {
+        супер (сообщение об ошибке, ошибка);
+    }
+}
