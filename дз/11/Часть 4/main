@@ -1,0 +1,26 @@
+пакет  ru.mirea.pr12.task4 ;
+
+public  class  Main {
+    public  static  void  main ( String [] args ) {
+        Строка str =  " 89149692089 " ;
+        Система . из . println (myString . normalize (str));
+
+        Строка str1 =  " +79149692089 " ;
+        Система . из . println (myString . normalize (str1));
+
+        Строка str2 =  " 9149692089 " ;
+        Система . из . println (myString . normalize (str2));
+    }
+}
+class  myString {
+    public  static  String  normalize ( String  str ) {
+        if (str . length () > 12  || str . length () < 11  || ( ! str . startWith ( " + " ) &&  ! str . startWith ( " 8 " )))
+            вернуть  « неверный ввод » ;
+        StringBuffer temp =  новый  StringBuffer (str);
+        если (ул . StartsWith ( " 8 " ))
+            темп . replace ( 0 , 1 , « +7 » );
+        темп . вставить ( 5 , " - " );
+        темп . вставить ( 9 , " - " );
+        возвратная темп . нанизывать();
+    }
+}
