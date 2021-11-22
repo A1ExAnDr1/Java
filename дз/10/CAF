@@ -1,0 +1,6 @@
+пакет  ru.mirea.pr10.task1 ;
+
+открытый  интерфейс  ComplexAbstractFactory {
+    общедоступный  Комплекс  createComplex ();
+    общедоступный  Комплекс  createComplex ( int  real , int  image );
+}
