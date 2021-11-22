@@ -1,0 +1,22 @@
+пакет  ru.mirea.pr10.task2 ;
+
+открытый  класс  VictorianChair  реализует  Chair {
+    частный  int age;
+
+    public  int  getAge () {
+        возвратный возраст;
+    }
+
+    public  VictorianChair () {
+        это . возраст =  0 ;
+    }
+
+    public  VictorianChair ( int  age ) {
+        это . age = возраст;
+    }
+
+    @Override
+    public  String  toString () {
+        return  " VictorianChair " ;
+    }
+}
