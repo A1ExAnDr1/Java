@@ -1,0 +1,15 @@
+пакет  ru.mirea.pr12.task2 ;
+
+public  class  Main {
+    public  static  void  main ( String [] args ) {
+        String test =  " Россия, Москва, Москва, пр-т Вернадского, 78, ст.1, 1 " ;
+        Адрес test1 =  новый  адрес ();
+        test1 . splitAddress (тест);
+        Система . из . println (test1);
+
+        Адрес test2 =  новый  адрес ();
+        test2 . tokenizeAddress (тест);
+        Система . из . println (test2);
+
+}
+}
