@@ -1,0 +1,48 @@
+пакет  ru.mirea.pr6 ;
+
+public  class  Test {
+    public  static  void  main ( String [] args ) {
+        Студент [] sortById =  Студент . getSamples ( правда );
+
+        for ( int i = 0 ; i < sortById . length; i ++ ) {
+            Система . из . печать (sortById [i]);
+            Система . из . печать ( '  ' );
+        }
+        Система . из . println ();
+
+        Студент [] sortedById =  InsertionSort . InsertSort (sortById);
+
+        for ( int i = 0 ; i < sortedById . length; i ++ ) {
+            Система . из . печать (sortedById [i]);
+            Система . из . печать ( '  ' );
+        }
+        Система . из . println ();
+
+        Студент [] sortByGPA =  Студент . getSamples ( ложь );
+        QuickSort . quickSort (sortByGPA, 0 , sortByGPA . длина -  1 );
+
+        for ( int i = 0 ; i < sortByGPA . length; i ++ ) {
+            Система . из . печать (sortByGPA [i]);
+            Система . из . печать ( '  ' );
+        }
+        Система . из . println ();
+
+        int [] sortByAll =  новый  int [sortById . длина + sortByGPA . длина];
+        int j = 0 ;
+        for ( int i = 0 ; i < sortByAll . length; i ++ ) {
+            if (i < sortById . length) {
+                sortByAll [i] = sortById [i] . getId ();
+            } else {
+                sortByAll [i] = sortByGPA [j] . getGPA ();
+                j ++ ;
+            }
+        }
+
+        MergeSort . mergeSort (sortByAll, 0 , sortByAll . длина);
+
+        for ( int i = 0 ; i < sortByAll . length; i ++ ) {
+            Система . из . печать (sortByAll [i]);
+            Система . из . печать ( '  ' );
+        }
+    }
+}
