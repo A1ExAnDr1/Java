@@ -1,0 +1,7 @@
+пакет  ru.mirea.pr10.task2 ;
+
+открытый  интерфейс  AbstractChairFactory {
+    public  VictorianChair  createVictrorianChair ();
+    public  MagicChair  createMagicanChair ();
+    общедоступный  FunctionalChair  createFunctionalChair ();
+}
