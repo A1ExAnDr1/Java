@@ -1,94 +1,94 @@
-пакет  ru.mirea.pr6 ;
+package ru.mirea.pr6;
 
-class  InsertionSort {
-    public  static  Student [] insertSort ( Student [] массив ) {
+class InsertionSort {
+    public static Student[] insertionSort(Student[] array) {
 
-        for ( int i =  1 ; i < array . length; i ++ ) {
-            Студент elem = array [i];
-            int j = i -  1 ;
+        for (int i = 1; i < array.length; i++) {
+            Student elem = array[i];
+            int j = i - 1;
 
-            while (j > =  0  && (array [j] . getId () > elem . getId ())) {
-                массив [j +  1 ] = массив [j];
-                j - ;
+            while (j >= 0 && (array[j].getId() > elem.getId())) {
+                array[j + 1] = array[j];
+                j--;
             }
-            массив [j +  1 ] = elem;
+            array[j + 1] = elem;
         }
 
-        возвратный массив;
+        return array;
     }
 }
-class  MergeSort {
-    public  static  void  mergeSort ( int [] array , int  leftIncl , int  rightExcl ) {
+class MergeSort {
+    public static void mergeSort(int[] array, int leftIncl, int rightExcl) {
 
-        if (rightExcl <= leftIncl +  1 ) {
-            возврат ;
+        if (rightExcl <= leftIncl + 1) {
+            return;
         }
 
-        int средний = leftIncl + (rightExcl - leftIncl) /  2 ;
+        int middle = leftIncl + (rightExcl - leftIncl) / 2;
 
-        mergeSort (массив, leftIncl, середина);
-        mergeSort (массив, середина, rightExcl);
+        mergeSort(array, leftIncl, middle);
+        mergeSort(array, middle, rightExcl);
 
-        слияние (массив, leftIncl, средний, rightExcl);
+        merge(array, leftIncl, middle, rightExcl);
     }
 
-    частное  статическое  слияние void  ( int [] массив , int слева , int в середине , int справа ) {   
-        int я = слева;
-        int j = средний;
-        int k =  0 ;
+    private static void merge(int[] array, int left, int middle, int right) {
+        int i = left;
+        int j = middle;
+        int k = 0;
 
-        int [] temp =  новый  int [справа - слева];
+        int[] temp = new int[right - left];
 
-        while (я < средний && j < правый) {
-            if (array [i] <= array [j]) {
-                temp [k] = массив [i];
-                i ++ ;
+        while (i < middle && j < right) {
+            if (array[i] <= array[j]) {
+                temp[k] = array[i];
+                i++;
             } else {
-                temp [k] = массив [j];
-                j ++ ;
+                temp[k] = array[j];
+                j++;
             }
-            k ++ ;
+            k++;
         }
 
-        for (; я < средний; я ++ , k ++ ) {
-            temp [k] = массив [i];
+        for (;i < middle; i++, k++) {
+            temp[k] = array[i];
         }
 
-        for (; j < right; j ++ , k ++ ) {
-            temp [k] = массив [j];
+        for (;j < right; j++, k++) {
+            temp[k] = array[j];
         }
 
-        Система . arraycopy (temp, 0 , array, left, temp . length);
+        System.arraycopy(temp, 0, array, left, temp.length);
     }
 }
-class  QuickSort {
-    public  static  void  quickSort ( Student [] array , int  left , int  right ) {
+class QuickSort {
+    public static void quickSort(Student[] array, int left, int right) {
         if (left < right) {
-            int pivotIndex = раздел (массив, слева, справа);
-            quickSort (массив, слева, pivotIndex -  1 );
-            quickSort (массив, pivotIndex +  1 , справа);
+            int pivotIndex = partition(array, left, right);
+            quickSort(array, left, pivotIndex - 1);
+            quickSort(array, pivotIndex + 1, right);
         }
     }
 
-    частный  статический  раздел int  ( массив Student [] , int слева , int справа ) {  
-        Сводка студента = массив [справа];
+    private static int partition(Student[] array, int left, int right) {
+        Student pivot = array[right];
         int partitionIndex = left;
 
-        for ( int i = left; i < right; i ++ ) {
-            if (array [i] . compareTo (pivot) <  1 ) {
-                swap (массив, i, partitionIndex);
-                partitionIndex ++ ;
+        for (int i = left; i < right; i++) {
+            if (array[i].compareTo(pivot) < 1) {
+                swap(array, i, partitionIndex);
+                partitionIndex++;
             }
         }
 
-        swap (массив, partitionIndex, справа);
+        swap(array, partitionIndex, right);
 
         return partitionIndex;
     }
 
-    частная  статическая  пустая  подкачка ( массив Student [] , int i , int j ) {  
-        Temp ученика = array [i];
-        массив [я] = массив [j];
-        array [j] = temp;
+    private static void swap(Student[] array, int i, int j) {
+        Student temp = array[i];
+        array[i] = array[j];
+        array[j] = temp;
     }
 }
