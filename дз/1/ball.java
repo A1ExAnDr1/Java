@@ -1,35 +1,35 @@
-пакет  ru.mirea.pr1 ;
+package ru.mirea.pr1;
 
-public  class  Ball {
-    частный  цвет строки ;
-     размер частной строки ;
+public class Ball {
+    private String color;
+    private String size;
 
-    public  Ball ( String  n , String  a ) {
-        цвет = n;
+    public Ball(String n, String a ){
+        color = n;
         size = a;
     }
-    public  Ball ( String  n ) {
-        цвет = n;
-        size =  " маленький " ;
+    public Ball(String n ){
+        color = n;
+        size = "small";
     }
-    public  Ball () {
-        color =  " желтый " ;
-        size =  " маленький " ;
+    public Ball( ){
+        color = "yellow";
+        size = "small";
     }
 
-    public  void  setColor ( Цвет строки  ) {
-        это . color = цвет;
+    public void setColor(String color){
+        this.color = color;
     }
-    public  void  setSize ( String  Name ) {
-        это . размер = размер;
+    public void setSize(String Name){
+        this.size = size;
     }
-    public  String  getColor () {
-        вернуть цвет;
+    public String getColor(){
+        return color;
     }
-    public  String  getSize () {
-        размер возврата ;
+    public String getSize(){
+        return size;
     }
-    public  String  toString () {
-        верни  это . размер + " и   " + это . цвет + « мяч. » ;
+    public String toString(){
+        return this.size+" and  "+this.color+" ball.";
     }
 }
