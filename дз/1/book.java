@@ -1,38 +1,38 @@
-пакет  ru.mirea.pr1 ;
+package ru.mirea.pr1;
 
-public  class  Book {
-    частное  строковое имя;
-    частные  int страницы;
+public class Book {
+    private String name;
+    private int pages;
 
-    общедоступная  книга ( String  n , int  a ) {
+    public Book(String n, int a ){
         name = n;
         pages = a;
     }
-    public  Book ( String  n ) {
+    public Book(String n ){
         name = n;
-        страницы =  0 ;
+        pages = 0;
     }
-    public  Book () {
-        name =  " 42 " ;
-        pages =  42 ;
+    public Book( ){
+        name = "42";
+        pages = 42;
     }
 
-    public  void  setPages ( int  age ) {
-        это . страницы = возраст;
+    public void setPages(int age){
+        this.pages = age;
     }
-    public  void  setName ( String  Name ) {
-        это . name = name;
+    public void setName(String Name){
+        this.name = name;
     }
-    public  int  getPages () {
-        вернуть страницы;
+    public int getPages(){
+        return pages;
     }
-    public  String  getName () {
-        возвращаемое имя;
+    public String getName(){
+        return name;
     }
-    public  String  toString () {
-        верни  это . name + " включает " + это . страницы + " страницы. " ;
+    public String toString(){
+        return this.name+" includes "+this.pages+" pages.";
     }
-    public  void  howLongToRead () {
-        Система . из . println ( " Требуется " + (pages / 2 ) / 60 + " часов и " + (pages / 2 ) % 60 + " минут для чтения " + имя);
+    public void howLongToRead(){
+        System.out.println("It is taking "+(pages/2)/60+" hours and "+(pages/2)%60+" minutes to read "+name);
     }
 }
