@@ -1,44 +1,44 @@
-пакет  ru.mirea.pr7 ;
+package ru.mirea.pr7;
 
-import  java.util.ArrayDeque ;
-import  java.util.Deque ;
-import  java.util.LinkedList ;
+import java.util.ArrayDeque;
+import java.util.Deque;
+import java.util.LinkedList;
 
-public  class  myDeque {
-    частный  статический  Deque < Integer > firstDeck =  new  ArrayDeque <> (),
-            secondDeck =  новый  ArrayDeque <> ();
+public class myDeque {
+    private static Deque<Integer> firstDeck = new ArrayDeque<>(),
+            secondDeck = new ArrayDeque<>();
 
-    myDeque ( Строка [] первый , строка [] второй ) {
-        for ( int i =  0 ; i <  5 ; i ++ ) {
-            firstDeck . добавить ( Целое число . parseInt (первый [я]));
-            secondDeck . добавить ( Целое число . parseInt (второй [я]));
+    myDeque(String[] first, String[] second){
+        for (int i = 0; i < 5; i++) {
+            firstDeck.add(Integer.parseInt(first[i]));
+            secondDeck.add(Integer.parseInt(second[i]));
         }
     }
-    публичный  статический  Строка  воспроизведения ( строка [] первая , строка [] второй ) {
-        новый myDeque (первый, второй);
-        for ( int i =  0 ; i <  106 ; i ++ ) {
-            если (firstDeck . size () ==  0 )
-                вернуть  « второй » + i;
-            иначе,  если (secondDeck . size () ==  0 )
-                вернуть  « первый » + i;
+    public static String play(String[] first, String[] second) {
+        new myDeque(first, second);
+        for (int i = 0; i < 106; i++) {
+            if (firstDeck.size() == 0)
+                return "second "+i;
+            else if (secondDeck.size()== 0)
+                return "first "+i;
             else {
-                Целое число a = firstDeck . Удалить();
-                Целое число b = secondDeck . Удалить();
-                if (a ==  0  && b ==  9 ) {
-                    firstDeck . добавить);
-                    firstDeck . добавить (б);
-                } else  if (b ==  0  && a ==  9 ) {
-                    secondDeck . добавить);
-                    secondDeck . добавить (б);
-                } else  if (a > b) {
-                    firstDeck . добавить);
-                    firstDeck . добавить (б);
+                Integer a = firstDeck.remove();
+                Integer b = secondDeck.remove();
+                if (a == 0 && b == 9){
+                    firstDeck.add(a);
+                    firstDeck.add(b);
+                } else if (b == 0 && a == 9){
+                    secondDeck.add(a);
+                    secondDeck.add(b);
+                } else if(a > b){
+                    firstDeck.add(a);
+                    firstDeck.add(b);
                 } else {
-                    secondDeck . добавить);
-                    secondDeck . добавить (б);
+                    secondDeck.add(a);
+                    secondDeck.add(b);
                 }
             }
         }
-        вернуть  « болда » ;
+        return "bolda";
     }
 }
