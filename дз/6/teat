@@ -1,48 +1,48 @@
-пакет  ru.mirea.pr6 ;
+package ru.mirea.pr6;
 
-public  class  Test {
-    public  static  void  main ( String [] args ) {
-        Студент [] sortById =  Студент . getSamples ( правда );
+public class Test {
+    public static void main(String[] args) {
+        Student[] sortById = Student.getSamples(true);
 
-        for ( int i = 0 ; i < sortById . length; i ++ ) {
-            Система . из . печать (sortById [i]);
-            Система . из . печать ( '  ' );
+        for (int i=0; i<sortById.length; i++){
+            System.out.print(sortById[i]);
+            System.out.print(' ');
         }
-        Система . из . println ();
+        System.out.println();
 
-        Студент [] sortedById =  InsertionSort . InsertSort (sortById);
+        Student[] sortedById = InsertionSort.insertionSort(sortById);
 
-        for ( int i = 0 ; i < sortedById . length; i ++ ) {
-            Система . из . печать (sortedById [i]);
-            Система . из . печать ( '  ' );
+        for (int i=0; i<sortedById.length; i++){
+            System.out.print(sortedById[i]);
+            System.out.print(' ');
         }
-        Система . из . println ();
+        System.out.println();
 
-        Студент [] sortByGPA =  Студент . getSamples ( ложь );
-        QuickSort . quickSort (sortByGPA, 0 , sortByGPA . длина -  1 );
+        Student[] sortByGPA = Student.getSamples(false);
+        QuickSort.quickSort(sortByGPA, 0, sortByGPA.length - 1);
 
-        for ( int i = 0 ; i < sortByGPA . length; i ++ ) {
-            Система . из . печать (sortByGPA [i]);
-            Система . из . печать ( '  ' );
+        for (int i=0; i<sortByGPA.length; i++){
+            System.out.print(sortByGPA[i]);
+            System.out.print(' ');
         }
-        Система . из . println ();
+        System.out.println();
 
-        int [] sortByAll =  новый  int [sortById . длина + sortByGPA . длина];
-        int j = 0 ;
-        for ( int i = 0 ; i < sortByAll . length; i ++ ) {
-            if (i < sortById . length) {
-                sortByAll [i] = sortById [i] . getId ();
+        int[] sortByAll = new int[sortById.length + sortByGPA.length];
+        int j=0;
+        for (int i=0; i<sortByAll.length; i++){
+            if (i<sortById.length){
+                sortByAll[i] = sortById[i].getId();
             } else {
-                sortByAll [i] = sortByGPA [j] . getGPA ();
-                j ++ ;
+                sortByAll[i] = sortByGPA[j].getGPA();
+                j++;
             }
         }
 
-        MergeSort . mergeSort (sortByAll, 0 , sortByAll . длина);
+        MergeSort.mergeSort(sortByAll, 0, sortByAll.length);
 
-        for ( int i = 0 ; i < sortByAll . length; i ++ ) {
-            Система . из . печать (sortByAll [i]);
-            Система . из . печать ( '  ' );
+        for (int i=0; i<sortByAll.length; i++){
+            System.out.print(sortByAll[i]);
+            System.out.print(' ');
         }
     }
 }
