@@ -1,38 +1,38 @@
-пакет  ru.mirea.pr5 ;
+package ru.mirea.pr5;
 
-import  java.util.Scanner ;
+import java.util.Scanner;
 
-public  class  task_7 {
-/ *
+public class task_7 {
+/*
     7. Разложение на множители
-    Дано натуральное число n> 1. Выведите все простые множители этого
+    Дано натуральное число n>1. Выведите все простые множители этого
     числа в порядке не убывания с учетом кратности. Алгоритм должен иметь
-    сложность O (logn)
- * /
-    public  static  void  main ( String [] args ) {
-        Сканер Сканер =  новый  Сканер ( System . In);
-        long n = сканер . nextInt ();
-        Система . из . печать (n + " = 1 " );
-        попробуйте {
-            разложить (п);
-        } catch ( исключение RuntimeException игнорируется) {}
+    сложность O(logn)
+ */
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        long n = scanner.nextInt();
+        System.out.print(n+" = 1");
+        try {
+            decompose(n);
+        } catch (RuntimeException ignored){ }
     }
 
-    private  static  void  разложить ( long  n ) {
-        разложить (n, 2 );
+    private static void decompose(long n) {
+        decompose(n, 2);
     }
 
-    private  static  void  разложить ( long  n , int  d ) {
-        if (n <=  1 ) {
-            Система . из . println ();
-            выбросить  новое  исключение RuntimeException ();
+    private static void decompose(long n, int d) {
+        if (n <= 1) {
+            System.out.println();
+            throw new RuntimeException();
         }
-        if (n % d ==  0 ) {
-            Система . из . печать ( " * "  + d);
-            разложить (n / d, d);
+        if (n%d == 0) {
+            System.out.print("*" + d);
+            decompose(n/d, d);
         }
         else {
-            разложить (n, d + 1 );
+            decompose(n, d+1);
         }
     }
 }
