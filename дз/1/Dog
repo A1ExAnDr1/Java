@@ -1,38 +1,38 @@
-пакет  ru.mirea.pr1 ;
-import  java.lang. * ;
-public  class  Dog {
-    частное  строковое имя;
-    частный  int age;
+package ru.mirea.pr1;
+import java.lang.*;
+public class Dog {
+    private String name;
+    private int age;
 
-    public  Dog ( String  n , int  a ) {
+    public Dog( String n, int a ){
         name = n;
-        возраст = а;
+        age = a;
     }
-    public  Dog ( String  n ) {
+    public Dog( String n ){
         name = n;
-        возраст =  0 ;
+        age = 0;
     }
-    public  Dog () {
-        name =  " Шарик " ;
-        возраст =  0 ;
+    public Dog( ){
+        name = "Sharik";
+        age = 0;
     }
 
-    public  void  setAge ( int  age ) {
-        это . age = возраст;
+    public void setAge(int age){
+        this.age = age;
     }
-    public  void  setName ( String  Name ) {
-        это . name = name;
+    public void setName(String Name){
+        this.name = name;
     }
-    public  int  getAge () {
-        возвратный возраст;
+    public int getAge(){
+        return age;
     }
-    public  String  getName () {
-        возвращаемое имя;
+    public String getName(){
+        return name;
     }
-    public  String  toString () {
-        верни  это . имя + " , возраст " + это . возраст;
+    public String toString(){
+        return this.name+", age "+this.age;
     }
-    public  void  intoHumanAge () {
-        Система . из . Println (имя + " возраст«s в человеческих лет " + возраст * 7 + " лет " );
+    public void intoHumanAge(){
+        System.out.println(name+"'s age in human years is "+age*7+" years");
     }
 }
