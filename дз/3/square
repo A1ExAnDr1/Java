@@ -1,39 +1,39 @@
-пакет  ru.mirea.pr3 ;
+package ru.mirea.pr3;
 
-public  class  Square  extends  Rectangle {
-    общественная  площадь () {}
-    общественная  площадь ( двойная  сторона ) {
-        это . ширина = сторона;
-        это . длина = сторона;
+public class Square extends Rectangle{
+    public Square() {}
+    public Square(double side){
+        this.width = side;
+        this.length = side;
     }
-    общественный  квадрат ( цвет строки  , логическое заполнение , двойная сторона ) {  
-        супер (цвет, заливка);
-        это . ширина = сторона;
-    }
-
-    public  double  getSide () {
-        ширина возврата ;
-    }
-    public  void  setSide ( двойная  сторона ) {
-        это . ширина = сторона;
-        это . длина = сторона;
+    public Square(String color, boolean filled, double side) {
+        super(color, filled);
+        this.width = side;
     }
 
-    @Override
-    public  void  setWidth ( двойная  сторона ) {
-        супер . setWidth (сторона);
+    public double getSide() {
+        return width;
+    }
+    public void setSide(double side) {
+        this.width = side;
+        this.length = side;
     }
 
     @Override
-    общественная  пустоты  SetLength ( двойная  сторона ) {
-        супер . setLength (сторона);
+    public void setWidth(double side) {
+        super.setWidth(side);
     }
 
     @Override
-    public  String  toString () {
-        вернуть  " Square { "  +
-                " сторона = "  + ширина +
-                " , color = ' "  + color +  ' \ ' '  +
-                ' } ' ;
+    public void setLength(double side) {
+        super.setLength(side);
+    }
+
+    @Override
+    public String toString() {
+        return "Square{" +
+                "side=" + width +
+                ", color='" + color + '\'' +
+                '}';
     }
 }
