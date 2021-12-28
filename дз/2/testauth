@@ -1,13 +1,13 @@
-пакет  ru.mirea.pr2 ;
-import  java.lang. * ;
-public  class  TestAuthor {
+package ru.mirea.pr2;
+import java.lang.*;
+public class TestAuthor {
 
-    public  static  void  main ( String [] args ) {
+    public static void main(String[] args) {
 
-        Автор a =  новый  Автор ( " Стив Петерсон " , " example@mail.com " , ' M ' );
+        Author a = new Author("Steve Peterson", "example@mail.com", 'M');
 
-        Система . из . println (а);
-        а . setEmail ( " steve@mail.com " );
-        Система . из . println (а);
+        System.out.println(a);
+        a.setEmail("steve@mail.com");
+        System.out.println(a);
     }
 }
