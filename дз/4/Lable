@@ -1,106 +1,106 @@
-пакет  ru.mirea.pr4 ;
+package ru.mirea.pr4;
 
-import  javax.swing. * ;
-import  java.awt. * ;
-import  java.awt.event. * ;
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.*;
 
-открытый  класс  Label  расширяет  JFrame {
+public class Label extends JFrame {
 
-    public  static  void  main ( String [] args ) {
-        новый  ярлык ();
+    public static void main(String[] args) {
+        new Label();
     }
 
-    int MilanScore   =  0 ,
-        MadridScore  =  0 ;
+    int MilanScore  = 0,
+        MadridScore = 0;
 
-    Результат JLabel =  новый  JLabel ( " Результат: " );
-    JLabel resultScore =  new  JLabel ( " 0: 0 " );
-    JLabel оценка   =  новый  JLabel ( " Последний бомбардир: N / A " );
-    Победитель JLabel =  новый  JLabel ( « Победитель: НИЧЬЯ » );
+    JLabel result = new JLabel("Result:");
+    JLabel resultScore = new JLabel("0 : 0");
+    JLabel score  = new JLabel("Last Scorer: N/A");
+    JLabel winner = new JLabel("Winner: DRAW");
 
-    Font font =  new  Font ( " Consolas " , Font . BOLD , 35 );
+    Font font = new Font("Consolas", Font.BOLD, 35);
 
-    public  void  printWinner () {
-        if ( MilanScore  >  MadridScore ) {
-            победитель . setText ( " Победитель: Милан " );
-        } else  if ( MilanScore  ==  MadridScore ) {
-            победитель . setText ( " РИСУНОК " );
+    public void printWinner() {
+        if (MilanScore > MadridScore) {
+            winner.setText("Winner: AC Milan");
+        } else if (MilanScore == MadridScore) {
+            winner.setText("DRAW");
         } else {
-            победитель . setText ( « Победитель: Реал Мадрид » );
+            winner.setText("Winner: Real Madrid");
         }
     }
 
-    public  void  JLabelStyle ( JLabel  jlabel ) {
-        jlabel . setHorizontalAlignment ( JLabel . CENTER );
-        jlabel . setFont (шрифт);
+    public void JLabelStyle(JLabel jlabel) {
+        jlabel.setHorizontalAlignment(JLabel.CENTER);
+        jlabel.setFont(font);
     }
 
-    private  void  updateResult () {
-        resultScore . setText ( MadridScore  +  " : "  +  MilanScore );
-        printWinner ();
+    private void updateResult(){
+        resultScore.setText(MadridScore + " : " + MilanScore);
+        printWinner();
     }
 
-    Label () {
-        JButton  ACMilan     =  новый  JButton (    " <html> "  +
-                " <font size = 15> "  +
-                " <p align = \" center \ " > "  +
-                « Милан » );
-        JButton  RealMadrid  =  новый  JButton ( " <html> "  +
-                " <font size = 15> "  +
-                " <p align = \" center \ " > "  +
-                « Реал Мадрид » );
+    Label() {
+        JButton ACMilan    = new JButton(   "<html>" +
+                "<font size=15>" +
+                "<p align=\"center\">" +
+                "AC Milan");
+        JButton RealMadrid = new JButton("<html>" +
+                "<font size=15>" +
+                "<p align=\"center\">" +
+                "Real Madrid");
 
-        добавить ( ACMilan ); добавить ( RealMadrid );
+        add(ACMilan); add(RealMadrid);
 
-        setLayout ( нуль );
-        setSize ( 470 , 215 );
-        setLayout ( новый  BorderLayout ());
-        setResizable ( ложь );
+        setLayout(null);
+        setSize(470,215);
+        setLayout(new BorderLayout());
+        setResizable(false);
 
-        ACMilan . setPreferredSize ( новое  измерение ( 150 , 80 ));
-        RealMadrid . setPreferredSize ( новое  измерение ( 150 , 80 ));
+        ACMilan.setPreferredSize(new Dimension(150, 80));
+        RealMadrid.setPreferredSize(new Dimension(150, 80));
 
-        ACMilan . setFocusable ( ложь );
-        ACMilan . setBorderPainted ( правда );
-        RealMadrid . setFocusable ( ложь );
-        RealMadrid . setBorderPainted ( правда );
+        ACMilan.setFocusable(false);
+        ACMilan.setBorderPainted(true);
+        RealMadrid.setFocusable(false);
+        RealMadrid.setBorderPainted(true);
 
-        // Милан
-        добавить ( ACMilan , BorderLayout . EAST );
-        ACMilan . addActionListener (событие - > {
-            MilanScore ++ ;
-            updateResult ();
-            оценка . setText ( " Последний счет: Милан " );
+        // AC Milan
+        add(ACMilan, BorderLayout.EAST);
+        ACMilan.addActionListener(event->{
+            MilanScore++;
+            updateResult();
+            score.setText("Last score: AC Milan");
         });
 
-        // Реал Мадрид
-        добавить ( RealMadrid , BorderLayout . WEST );
-        RealMadrid . addActionListener (событие - > {
-            MadridScore ++ ;
-            updateResult ();
-            оценка . setText ( " Последний результат: Реал Мадрид " );
+        // Real Madrid
+        add(RealMadrid, BorderLayout.WEST);
+        RealMadrid.addActionListener(event->{
+            MadridScore++;
+            updateResult();
+            score.setText("Last score: Real Madrid");
         });
 
-        JPanel resultPanel =  новый  JPanel ();
-        resultPanel . setPreferredSize ( новое  измерение ( 50 , 50 ));
-        добавить (resultPanel, BorderLayout . CENTER );
-        resultPanel . добавить (результат, BorderLayout . ЦЕНТР );
-        resultPanel . добавить (resultScore, BorderLayout . ЮГ );
-        JLabelStyle (результат);
-        JLabelStyle (resultScore);
-        / *
-        добавить (результат, BorderLayout.CENTER);
-        JLabelStyle (результат);
-        добавить (resultScore, BorderLayout.CENTER);
-        JLabelStyle (resultScore);
-* /
-        добавить (победитель, BorderLayout . СЕВЕР );
-        JLabelStyle (победитель);
+        JPanel resultPanel = new JPanel();
+        resultPanel.setPreferredSize(new Dimension(50, 50));
+        add(resultPanel, BorderLayout.CENTER);
+        resultPanel.add(result, BorderLayout.CENTER);
+        resultPanel.add(resultScore, BorderLayout.SOUTH);
+        JLabelStyle(result);
+        JLabelStyle(resultScore);
+        /*
+        add(result, BorderLayout.CENTER);
+        JLabelStyle(result);
+        add(resultScore, BorderLayout.CENTER);
+        JLabelStyle(resultScore);
+*/
+        add(winner, BorderLayout.NORTH);
+        JLabelStyle(winner);
 
-        добавить (оценка, BorderLayout . ЮГ );
-        JLabelStyle (оценка);
+        add(score, BorderLayout.SOUTH);
+        JLabelStyle(score);
 
-        setVisible ( правда );
+        setVisible(true);
     }
 
 
