@@ -1,54 +1,54 @@
-пакет  ru.mirea.pr3 ;
-import  java.lang. * ;
-public  class  Test123 {
-    public  static  void  main ( String [] args ) {
-        Форма s1 =  новый  круг ( 5.5 , « КРАСНЫЙ » , false ); // Приведение круга к форме
-        Система . из . println (s1); // какая версия?
-        Система . из . println (s1 . getArea ()); // какая версия?
-        Система . из . println (s1 . getPerimeter ()); // какая версия?
-        Система . из . println (s1 . getColor ());
-        Система . из . println (s1 . isFilled ());
-        // System.out.println (s1.getRadius ()); ОШИБКА - у Shape нет getRadius ()
-        Круг c1 = ( Круг ) s1; // Вернемся к кругу
-        Система . из . println (c1);
-        Система . из . println (c1 . getArea ());
-        Система . из . println (c1 . getPerimeter ());
-        Система . из . println (c1 . getColor ());
-        Система . из . println (c1 . isFilled ());
-        Система . из . println (c1 . getRadius ());
-        // ОШИБКА Shape s2 = new Shape (); - Форма - абстрактный
-        Форма s3 =  новый  прямоугольник ( 1.0 , 2.0 , « КРАСНЫЙ » , false );
-        Система . из . println (s3);
-        Система . из . println (s3 . getArea ());
-        Система . из . println (s3 . getPerimeter ());
-        Система . из . println (s3 . getColor ());
-        // System.out.println (s3.getLength ()); ОШИБКА у Shape нет getLength ()
-        Прямоугольник r1 = ( Прямоугольник ) s3; // пониженный
-        Система . из . println (r1);
-        Система . из . println (r1 . getArea ());
-        Система . из . println (r1 . getColor ());
-        Система . из . println (r1 . getLength ());
-        Форма s4 =  новый  квадрат ( 6.6 );
-        Система . из . println (s4);
-        Система . из . println (s4 . getArea ());
-        Система . из . println (s4 . getColor ());
-        // System.out.println (s4.getSide ()); ОШИБКА у Shape нет getSide ()
+package ru.mirea.pr3;
+import java.lang.*;
+public class Test123 {
+    public static void main(String[] args) {
+        Shape s1 = new Circle(5.5, "RED", false); // Upcast Circle to Shape
+        System.out.println(s1); // which version?
+        System.out.println(s1.getArea()); // which version?
+        System.out.println(s1.getPerimeter()); // which version?
+        System.out.println(s1.getColor());
+        System.out.println(s1.isFilled());
+        //System.out.println(s1.getRadius()); ОШИБКА - у Shape нет getRadius()
+        Circle c1 = (Circle)s1; // Downcast back to Circle
+        System.out.println(c1);
+        System.out.println(c1.getArea());
+        System.out.println(c1.getPerimeter());
+        System.out.println(c1.getColor());
+        System.out.println(c1.isFilled());
+        System.out.println(c1.getRadius());
+        //ОШИБКА Shape s2 = new Shape(); - Shape - абстрактный
+        Shape s3 = new Rectangle(1.0, 2.0, "RED", false);
+        System.out.println(s3);
+        System.out.println(s3.getArea());
+        System.out.println(s3.getPerimeter());
+        System.out.println(s3.getColor());
+        //System.out.println(s3.getLength()); ОШИБКА у Shape нет getLength()
+        Rectangle r1 = (Rectangle)s3; // downcast
+        System.out.println(r1);
+        System.out.println(r1.getArea());
+        System.out.println(r1.getColor());
+        System.out.println(r1.getLength());
+        Shape s4 = new Square(6.6);
+        System.out.println(s4);
+        System.out.println(s4.getArea());
+        System.out.println(s4.getColor());
+        //System.out.println(s4.getSide()); ОШИБКА у Shape нет getSide()
 
-        // Обратите внимание, что мы понижаем Shape s4 до Rectangle,
-        // который является суперклассом Square, а не Square
+        // Take note that we downcast Shape s4 to Rectangle,
+        // which is a superclass of Square, instead of Square
 
-        Прямоугольник r2 = ( Прямоугольник ) s4;
-        Система . из . println (r2);
-        Система . из . println (r2 . getArea ());
-        Система . из . println (r2 . getColor ());
-        Система . из . println (r2 . getWidth ());
-        Система . из . println (r2 . getLength ());
-        // Преобразование прямоугольника r2 в квадрат
-        Квадрат sq1 = ( Квадрат ) r2;
-        Система . из . println (sq1);
-        Система . из . println (sq1 . getArea ());
-        Система . из . println (sq1 . getColor ());
-        Система . из . println (sq1 . getSide ());
-        Система . из . println (sq1 . getLength ());
+        Rectangle r2 = (Rectangle)s4;
+        System.out.println(r2);
+        System.out.println(r2.getArea());
+        System.out.println(r2.getColor());
+        System.out.println(r2.getWidth());
+        System.out.println(r2.getLength());
+        // Downcast Rectangle r2 to Square
+        Square sq1 = (Square)r2;
+        System.out.println(sq1);
+        System.out.println(sq1.getArea());
+        System.out.println(sq1.getColor());
+        System.out.println(sq1.getSide());
+        System.out.println(sq1.getLength());
     }
 }
